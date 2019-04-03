@@ -1,0 +1,9 @@
+options:
+  lineNumbers: false
+  spellcheck: false
+  askImageFilename: false
+  imagePrefix: my_blog_
+editor:
+  lineNumbers: false
+  inputStyle: contenteditable
+  spellcheck: false
