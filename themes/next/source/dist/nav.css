@@ -1,0 +1,64 @@
+/*设置头部的显示*/
+.header {
+  height: 417px;
+  background: no-repeat center center;
+  padding: 20px;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.header p {
+  color: #fff
+}
+
+.site-brand-wrapper a {
+  color: #fff !important;
+}
+
+.site-title {
+  font-size: 30px;
+}
+
+.header_nav {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  opacity: 0;
+  top: 0;
+  z-index: 100000;
+  max-height: 340px;
+  padding-right: 0;
+  padding-left: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  /*border:1px solid #ccc;*/
+}
+
+.a_tag {
+  z-index: 100001;
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  top: 0;
+}
+
+.a_tag a {
+  color: #ffffff;
+}
+
+.a_tag ul {
+  position: absolute;
+  right: 20px;
+}
+
+@media screen and (max-width: 766px) {
+  .header_nav {
+    display: none !important;
+  }
+
+  .a_tag {
+    display: none !important;
+  }
+}
+

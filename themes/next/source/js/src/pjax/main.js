@@ -5,7 +5,8 @@ require.config({
     "music": "/dist/music",
     //目前会消耗较多的性能，以后可能会去掉。
     "aplayer": "/js/src/aplayer",
-    "backgroudLine": "/js/src/backgroudLine",
+    //暂时去掉了
+    // "backgroudLine": "/js/src/backgroudLine",
     "category": "/js/src/category",
     "jquery.share.min":"/js/src/pjax/share/jquery.share.min",
     /*不显示图标的话替换fonts*/
@@ -17,9 +18,12 @@ require.config({
     "header_left":"/js/src/pjax/header_left",
     "article_top":"/js/src/pjax/article_top",
     "easing":"/js/src/pjax/easing/jquery.easing.1.3",
-    "scrollReveal":"/js/src/pjax/scrollReveal/scrollReveal",
-    "my_scrollReveal":"/js/src/pjax/scrollReveal/my_scrollReveal",
-    "hover_main":"/js/src/pjax/hover"
+    //暂时去掉
+    // "scrollReveal":"/js/src/pjax/scrollReveal/scrollReveal",
+    // "my_scrollReveal":"/js/src/pjax/scrollReveal/my_scrollReveal",
+    "hover_main":"/js/src/pjax/hover",
+    "underscore":"/js/src/pjax/scrollReveal/underscore-min",
+    "nav":"/dist/nav"
   },
 
   shim: {
@@ -42,10 +46,15 @@ require.config({
       deps:[
         'scrollReveal'
       ]
-    }
+    },
+    'nav':{
+      deps:[
+        'underscore'
+      ]
+    },
   }
 });
-require(['backgroudLine','music','aplayer','category','jquery.share.min','share','css','comments','eye',
-'header_left','article_top','easing','scrollReveal','my_scrollReveal','hover_main'], function (){
+require(['music','aplayer','category','jquery.share.min','share','css','comments','eye',
+'header_left','article_top','easing','hover_main','underscore','nav'], function (){
 
 });

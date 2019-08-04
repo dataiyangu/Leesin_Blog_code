@@ -86,11 +86,11 @@ deploy:
   type: git
   repo:
 #  https://gitee.com/dataiyangu/dataiyangu.git
-   github: git@github.com:dataiyangu/dataiyangu.github.io.git
+#   github: git@github.com:dataiyangu/dataiyangu.github.io.git
 #   github: https://github.com/dataiyangu/dataiyangu.github.io.git
 #   coding: git@git.dev.tencent.com:dataiyangu/dataiyangu.git
-   coding: https://git.dev.tencent.com/dataiyangu/dataiyangu.git
-#   oschina: https://gitee.com/dataiyangu/dataiyangu.git
+#   coding: https://git.dev.tencent.com/dataiyangu/dataiyangu.git
+   oschina: https://gitee.com/ilxx/ilxx.git
   branch: master
 
 

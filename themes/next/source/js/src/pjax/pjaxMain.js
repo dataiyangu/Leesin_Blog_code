@@ -28,7 +28,8 @@ $(document).on('pjax:complete',
         "pjax_function_public":"/js/src/pjax/pjax_function_public",
         "comments":"/js/src/pjax/comments_git",
         // "love":"/js/src/love"
-
+        "underscore":"/js/src/pjax/scrollReveal/underscore-min",
+        "nav":"/dist/nav"
       },
       shim: {
         'share': {
@@ -41,14 +42,18 @@ $(document).on('pjax:complete',
             'css!/js/src/pjax/comments/gitalk'
           ]
         },
+        'nav':{
+          deps:[
+            'underscore'
+          ]
+        },
       }
     });
 
     require(['jquery.share.min','share','css','pjax_function_public','comments'
+      ,'underscore'
     ], function () {
       pjax();
-
-
     });
   })
 
@@ -64,10 +69,8 @@ function pjax() {
   article_top_js();
 //不蒜子
   busuanzi_js();
-
   //自己写的分享
-  // pjaxshare();
-
+  pjaxshare();
 // 分类的js
   category_js();
 // 局部刷新后文章内容不显示bug的js
@@ -88,14 +91,17 @@ function pjax() {
   //捐赠的函数
   donate();
   //随鼠标的滚动文章动态出现的动画
-  my_scrollReveal_js();
+  // my_scrollReveal_js();
   //隐藏左下角的东东
   hover_sidebar();
   pjax_eye_change();
 
   //点击图片后不放大
   wrapImageWithFancyBox();
+  //复制
   copy_code();
+//顶部常驻
+//   header_top();
 
 }
 

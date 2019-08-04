@@ -3,12 +3,14 @@ define(function () {
     container: document.getElementById('aplayer'),
     fixed: true,
       theme: '#3C3F41',
+      preload:false,
     // listFolded: true,//列表默认折叠
     // listMaxHeight: 90,//列表最大高度
     // autoplay: false,
     // lrcType: 3,//歌词，直接删掉
     // mini:false,
     //theme:'＃cccccc',
+
 
     audio: [
 

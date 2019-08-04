@@ -9,7 +9,8 @@
 <script src="/js/src/pjax/jquery_pjax_min_js.js"></script>
 <script src="/js/src/pjax/pjaxMain.js"></script>
 
-
+{#设置header的背景图#}
+{% include '_optimization/nav.swig' %}
 
 {% set html_class = 'theme-next ' + theme.scheme %}
 {% if theme.motion.enable %}
@@ -21,8 +22,13 @@
   <title>{% block title %}{% endblock %}</title>
   {% include '_third-party/analytics/index.swig' %}
 </head>
+
 <body itemscope itemtype="http://schema.org/WebPage" lang="{{ page.lang || page.language || config.language }}">
 <link rel="stylesheet" href="/dist/APlayer.min.css">
+{#顶部状态栏常驻#}
+<link  rel="stylesheet" href="/dist/nav.css">
+
+
 
 
 <div class="hover_sidebar">  </div>
@@ -67,7 +73,6 @@
   {% endif %}
   <div class="{{ container_class }} {% block page_class %}{% endblock %}">
     <div class="headband"></div>
-<a href="https://github.com/dataiyangu?tab=repositories"><img style="position: absolute; top: 0; left: 0; border: 0;" src="/images/github_fork.png" alt="Fork me on GitHub"></a>
   <div class="bg_content">
        <canvas id="canvas"></canvas>
   </div>
@@ -75,11 +80,46 @@
       <div class="header-inner"> {%- include '_partials/header.swig' %} </div>
     </header>
 
+{#顶部常驻#}
+<div class = "nav">
+     <div class="header_nav">
 
+     </div>
+     <div class = "a_tag">
+                  <ul id="menu" class="menu">
+                       {% for name, path in theme.menu %}
+                         {% set itemName = name.toLowerCase() %}
+                         <li class="menu-item menu-item-{{ itemName | replace(' ', '-') }}">
+                           <a href="{{ url_for(path.split('||')[0]) | trim }}" rel="section">
+
+                             {{ __('menu.' + name) | replace('menu.', '') }}
+                           </a>
+                         </li>
+                       {% endfor %}
+
+                       {% if hasSearch %}
+                         <li class="menu-item menu-item-search">
+                           {% if theme.swiftype_key %}
+                             <a href="javascript:;" class="st-search-show-outputs">
+                           {% elseif theme.local_search.enable || theme.algolia_search.enable %}
+                             <a href="javascript:;" class="popup-trigger">
+                           {% endif %}
+                             {% if theme.menu_icons.enable %}
+                             {% endif %}
+                             {{ __('menu.search') }}
+                           </a>
+                         </li>
+                       {% endif %}
+                     </ul>
+     </div>
+
+</div>
+{#顶部常驻结束#}
 
 
 
 <div id="pjax-container">
+
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
@@ -100,7 +140,6 @@
 
     </main>
 </div>
-
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
@@ -170,6 +209,8 @@
 <script src="/js/src/pjax/comments/comments.gitalk.js"></script>
 <script src="/js/src/pjax/require.js" defer async="true" data-main="/js/src/pjax/main.js"></script>
 
+{#顶部的js#}
+{#<script <script type="text/javascript" src="/dist/nav.js" ></script>#}
 
 
 

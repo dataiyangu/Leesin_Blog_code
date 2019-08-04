@@ -35,6 +35,8 @@
 <nav class="site-nav">
   {% set hasSearch = theme.swiftype_key || theme.algolia_search.enable || theme.tinysou_Key || theme.local_search.enable %}
 
+{#这里设置将原来的menu去掉，不好看#}
+
   {% if theme.menu %}
     <ul id="menu" class="menu">
       {% for name, path in theme.menu %}
@@ -65,6 +67,8 @@
       {% endif %}
     </ul>
   {% endif %}
+
+
 
   {% if hasSearch %}
     <div class="site-search">

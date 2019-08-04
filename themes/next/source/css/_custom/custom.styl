@@ -135,6 +135,8 @@
 
 //文章中的图片大小
 //设置最大图片大小，防止图片过大。
+/*默认的border在文件themes/next/source/css/_common/components/post/post-expand.styl中*/
+//图片border 根据名字选择css https://developer.mozilla.org/zh-CN/docs/Web/CSS/Attribute_selectors
 .posts-expand .post-body img{
   max-height :500px;
 }
@@ -312,6 +314,11 @@ z-index :10000;
 /*电脑端*/
 /*header hover事件 不在这里面包着也行*/
 @media screen and (min-width: 768px) {
+  //电脑端header哪里的图标隐藏
+  .site-nav{
+    display: none !important;
+  }
+
   //文章宽度
   .main-inner {
     // margin-top: 60px;
@@ -319,7 +326,7 @@ z-index :10000;
     // padding: 60px 60px 60px 60px;
     //background: #fff;
 
-    width:1100px;
+    width:900px;
 
     //始终比父类小xxpx
 
@@ -406,7 +413,7 @@ body {
 }
 
 article p {
-  font-size: 17px;
+  font-size: 15px;
   line-height: 1.6;
   color: #333;
   font-family: -apple-system-font,BlinkMacSystemFont,"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei UI","Microsoft YaHei",Arial,sans-serif !important;
@@ -414,12 +421,12 @@ article p {
   text-align: justify;
 }
 .gutter pre span, .code pre span{
-  font: 400 17px Source Code monospace,PingFang SC,Microsoft YaHei,sans-serif!important
+  font: 400 15px Source Code monospace,PingFang SC,Microsoft YaHei,sans-serif!important
 }
   /*代码颜色*/
-.code pre .line {
-  color: #f6941d
-}
+//.code pre .line {
+//  color: #f6941d
+//}
 
 
 
@@ -434,10 +441,14 @@ article p {
     border :none
     background-color : #fff;
     width:30%;
+    display: none;
   }
   .site-nav ul li{
     margin-bottom :10px;
     font-size :13px
+  }
+  .site-nav ul li a {
+    font:#666 ;
   }
   //修改手机端文章左右的margi值
   #posts{

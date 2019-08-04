@@ -162,7 +162,6 @@ links_layout: inline
 links:
   我的CSDN: https://blog.csdn.net/dataiyangu
   叶落阁: https://yelog.org
-  边小丰: http://www.bianxiaofeng.com
   QQ爹: https://qqdie.com
 
   #Title: http://example.com/
@@ -234,7 +233,7 @@ excerpt_description: true
 # Please use <!-- more --> in the post to control excerpt accurately.
 auto_excerpt:
   enable: true
-  length: 500
+  length: 150
 
 # Post meta display settings
 post_meta:

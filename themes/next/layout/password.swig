@@ -10,13 +10,7 @@ function password() {
   if('{{ page.password }}'){
     div.remove();
     toc.remove();
-    $('.post-header').after('<textarea class="description" value="Please enter your password and press enter to build" style="border: none;display: block;' +
-      'width: 60%;margin: 0 auto;text-align: center;outline: none;margin-bottom: 50px;resize:none ">
-      Please enter your password and press enter to build</textarea>' +
-      '<div class="qiang" style="height: 100px;width: 60%;margin:0 auto">' +
-      '<input class="password"  type="text" value="" style="border: none;display: block;border-bottom: 1px solid #ccc;' +
-      'margin: 0 auto;outline: none;width:95%"/>' +
-      '</div>')
+    $('.post-header').after('<textarea class="description" value="Please enter your password and press enter to build"style="border: none;display: block;width: 60%;margin: 0 auto;text-align: center;outline: none;margin-bottom: 50px;resize:none ">Please enter your password and press enter to build </textarea> <div class="qiang" style="height: 100px;width: 60%;margin:0 auto"><input class="password"  type="text" value="" style="border: none;display: block;border-bottom: 1px solid #ccc;margin: 0 auto;outline: none;width:95%"/></div>')
 
     document.onclick = function (event) {
       var e = event || window.event;

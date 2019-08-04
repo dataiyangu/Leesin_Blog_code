@@ -10,7 +10,7 @@
     {% set post_class = post_class + ' ' + 'post-sticky' %}
   {% endif %}
 
-  <article data-scroll-reveal="enter bottom move 60px over 0.6s after 0.05s" class="{{ post_class }}" itemscope itemtype="http://schema.org/Article">
+  <article data-scroll-reveal="enter bottom move 80px over 1s after 0.0s" class="{{ post_class }}" itemscope itemtype="http://schema.org/Article">
   {##################}
   {### POST BLOCK ###}
   {##################}

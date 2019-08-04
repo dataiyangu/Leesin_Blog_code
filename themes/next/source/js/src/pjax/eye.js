@@ -45,7 +45,7 @@ function eye() {
       $("h3").css({"color": "#FFFF66"});
       $("h4").css({"color": "#FFFF66"});
     } else {
-      $("p").css({"color": "#333"});
+      $("article p").css({"color": "#333"});
       $("a:not(.social-share-icon)").css({"color": "#555"});
       $("p a").css({"color":"#0593d3"});
       $("h1").css({"color": "#555"});

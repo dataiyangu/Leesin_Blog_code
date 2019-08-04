@@ -53,7 +53,8 @@
 
   ul li { list-style: circle; }
 
-  img {
+  //只有是jpg  png 包含g的时候才有边框  gif没有 查看https://developer.mozilla.org/zh-CN/docs/Web/CSS/Attribute_selectors
+  img[src$="g"]{
     box-sizing: border-box;
     margin: auto;
     padding: 3px;
